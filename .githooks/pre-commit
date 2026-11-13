@@ -1,0 +1,13 @@
+#!/bin/sh
+# Git pre-commit hook for documentation quality guardrails
+echo "🚀 [pre-commit] Running documentation guardrails & build check..."
+
+npm run docs:check
+
+if [ $? -ne 0 ]; then
+  echo "❌ [pre-commit] Commit rejected: please fix the issues above before committing."
+  exit 1
+fi
+
+echo "✨ [pre-commit] All documentation checks passed!"
+exit 0
