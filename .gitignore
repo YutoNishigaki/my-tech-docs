@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Build output and caches
+.vitepress/dist/
+.vitepress/cache/
+dist/
+coverage/
+
+# Environment variables and credentials
+.env
+.env.*
+!.env.example
+!.env.*.example
+.npmrc
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Logs and system files
+*.log
+.DS_Store
